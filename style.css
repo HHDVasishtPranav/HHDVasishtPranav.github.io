@@ -13,7 +13,7 @@ nav {
   align-items: center;
   width: 100%;
   padding: 1em 5em;
-  position: fixed;
+  /* position: fixed; */
   z-index: 1;
 }
 
@@ -23,7 +23,7 @@ nav {
 }
 
 nav h4 {
-  background: linear-gradient(to right, #00147a, #da1b60);
+  background: linear-gradient(to right,orange, white, green);
   /* Adjust color stops as needed */
   background-clip: text;
   font-family: 'Dancing Script', cursive;
