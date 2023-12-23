@@ -1,0 +1,333 @@
+body {
+  margin: 0;
+  font-family: "Recoleta", sans-serif;
+  background-color: #f70000;
+  display: inline-block;
+  color: white;
+}
+
+nav {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.744);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1em 5em;
+  position: fixed;
+  z-index: 1;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+nav h4 {
+  background: linear-gradient(to right, #00147a, #da1b60);
+  /* Adjust color stops as needed */
+  background-clip: text;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bolder;
+  color: transparent;
+  display: inline-block;
+  font-size: 2em;
+}
+
+
+.li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  /* Optional: Add some margin between rows */
+}
+
+.li>div {
+  flex-basis: calc(25% - 10px);
+  /* Adjust the width as needed and consider margin */
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 10px;
+  /* Optional: Add some margin between items */
+}
+
+.li img {
+  width: 40%;
+  height: auto;
+}
+
+.li p {
+  margin-top: 5px;
+  /* Optional: Add some space between image and name */
+}
+
+/* Blobs */
+.blob-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-right: 5em;
+  background-color: rgba(0, 0, 0, 0.333);
+}
+
+.blob {
+  border-radius: 100px;
+  filter: blur(60px);
+  position: fixed;
+}
+
+.yellow {
+  background-color: #0400ff;
+  top: 200px;
+  left: 100px;
+  height: 200px;
+  width: 200px;
+  animation: yellow 8s infinite ease;
+}
+
+.green {
+  background-color: #ffdd00;
+  top: 80px;
+  right: -20px;
+  height: 200px;
+  width: 250px;
+  animation: green 8s infinite ease;
+}
+
+.red {
+  background-color: #fa0000;
+  top: 300px;
+  right: 0;
+  height: 250px;
+  width: 200px;
+  animation: red 8s infinite linear;
+}
+
+@keyframes yellow {
+  0% {
+    top: 200px;
+    left: 100px;
+    transform: scale(1);
+    width: 800px;
+  }
+
+  30% {
+    top: 300px;
+    left: 150px;
+    transform: scale(1.2);
+    width: 300px;
+  }
+
+  60% {
+    top: 100px;
+    left: 200px;
+    transform: scale(1.3);
+    width: 600px;
+  }
+
+  100% {
+    top: 200px;
+    left: 100px;
+    transform: scale(1);
+    width: 800px;
+  }
+}
+
+@keyframes green {
+  0% {
+    top: 80px;
+    right: -20px;
+    transform: scale(1.2);
+    width: 800px;
+  }
+
+  30% {
+    top: 300px;
+    right: -20px;
+    transform: scale(1);
+    width: 300px;
+    width: 800px;
+  }
+
+  60% {
+    top: 200px;
+    right: 100px;
+    transform: scale(1);
+    width: 600px;
+  }
+
+  100% {
+    top: 80px;
+    right: -20px;
+    transform: scale(1.2);
+    width: 800px;
+  }
+}
+
+@keyframes red {
+  0% {
+    top: 250px;
+    right: 0px;
+    transform: scale(1);
+    width: 800px;
+  }
+
+  30% {
+    top: 150px;
+    right: 150px;
+    transform: scale(1.4);
+    width: 300px;
+  }
+
+  60% {
+    top: 250px;
+    right: 100px;
+    transform: scale(1);
+    width: 600px;
+  }
+
+  100% {
+    top: 250px;
+    right: 0px;
+    transform: scale(1);
+    width: 800px;
+  }
+}
+
+.section {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+}
+
+.d1 .blob-cont {
+  margin-right: 0;
+  /* Remove margin for the first section */
+}
+
+@media only screen and (max-width: 768px) {
+  .blob-cont {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .blob {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .blob-cont {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .blob {
+    width: 100%;
+  }
+
+  .section {
+    text-align: center;
+  }
+}
+
+
+
+
+
+.cards {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-column-gap: 10px;
+  grid-auto-flow: column;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: fit-content;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+  scroll-snap-align: start;
+  transition: all 0.2s;
+}
+
+.card:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.329);
+}
+
+.card .card-title {
+  font-size: 20px;
+}
+
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+.card .card-link-wrapper {
+  margin-top: auto;
+}
+
+.card .card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: var(--orange);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.card:hover .card-link {
+  background: var(--darkorange);
+}
+
+.cards::scrollbar {
+  height: 12px;
+}
+
+.cards::scrollbar-thumb,
+.cards::scrollbar-track {
+  border-radius: 92px;
+}
+
+.cards::scrollbar-thumb {
+  background: var(--darkorange);
+}
+
+.cards::scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .cards {
+    grid-auto-columns: calc(50% - 10px);
+    grid-column-gap: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-auto-columns: calc(calc(100% / 3) - 20px);
+    grid-column-gap: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .cards {
+    grid-auto-columns: calc(25% - 30px);
+    grid-column-gap: 40px;
+  }
+}
