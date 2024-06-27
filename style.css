@@ -6,6 +6,7 @@ body {
   color: white;
 }
 
+
 nav {
   display: flex;
   background-color: rgba(0, 0, 0, 0.744);
@@ -24,7 +25,6 @@ nav {
 
 nav h4 {
   background: linear-gradient(to right, #ffcc00, #da1b1b);
-  /* Adjust color stops as needed */
   background-clip: text;
   font-family: 'Dancing Script', cursive;
   font-weight: bolder;
@@ -41,16 +41,12 @@ nav h4 {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
-  /* Optional: Add some margin between rows */
 }
 
 .li>div {
-  flex-basis: calc(25% - 10px);
-  /* Adjust the width as needed and consider margin */
+  flex-basis: calc(20% - 5px);
   box-sizing: border-box;
   text-align: center;
-  margin-bottom: 10px;
-  /* Optional: Add some margin between items */
 }
 
 .li img {
@@ -60,8 +56,8 @@ nav h4 {
 
 .li p {
   margin-top: 5px;
-  /* Optional: Add some space between image and name */
 }
+
 
 /* Blobs */
 .blob-cont {
@@ -208,7 +204,6 @@ nav h4 {
 
 .d1 .blob-cont {
   margin-right: 0;
-  /* Remove margin for the first section */
 }
 
 @media only screen and (max-width: 768px) {
@@ -220,7 +215,18 @@ nav h4 {
   .blob {
     width: 100%;
   }
+
+
+
+  .about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
 }
+
+
 
 @media only screen and (max-width: 768px) {
   .blob-cont {
@@ -331,5 +337,116 @@ nav h4 {
   .cards {
     grid-auto-columns: calc(25% - 30px);
     grid-column-gap: 40px;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .about-content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+
+
+
+.about-content button {
+  margin: 10px;
+  display: inline-block;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  padding: 17px 30px;
+  border: 2px solid transparent;
+  border-color: #000;
+  color: #000;
+  background: transparent;
+  font-size: 17.5px;
+  font-weight: 800;
+  line-height: 30px;
+  transition: background color 0.1s ease-in-out;
+}
+
+.about-content button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+
+/* Social Icons */
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  padding: 0;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 1200px) {
+  .icon {
+    height: 90px;
+    width: 90px;
+    margin: 40px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .icon {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .icon {
+    height: 80px;
+    margin: 30px;
+    width: 80px;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons li {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon {
+    height: 60px;
+    width: 60px;
   }
 }
